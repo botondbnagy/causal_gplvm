@@ -37,7 +37,7 @@ To install dependencies, run `pip install -r requirements.txt`
 
 Cross-validation was compared with the Bayesian model selection method. The difference in marginal likelihoods between causal directions was found to be significant enough to warrant the use of cross-validation in additive noise models:
 
-![Cross-validation](figs/AN_causal_stem.jpg)
+![Cross-validation](gplvm_causal_discovery/figs/AN_causal_stem.jpg)
 
 ### Infinite Data:
 
