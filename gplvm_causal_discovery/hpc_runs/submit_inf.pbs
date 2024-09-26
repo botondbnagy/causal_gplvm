@@ -1,0 +1,23 @@
+#PBS -l walltime=12:00:00
+#PBS -l select=1:ncpus=2:mem=32gb:ngpus=1:gpu_type=RTX6000
+#PBS -J 0-34
+
+module load anaconda3/personal
+module load cuda/11.2.2
+module load cudnn/8.2.4
+
+source activate GPLVM
+
+cd $PBS_O_WORKDIR
+
+python run_exp.py \
+    --data inf_data \
+    --method general \
+    --n_iters 50000 \
+    --optimiser natgrad \
+    --num_inducing 25 \
+    --minibatch_size 15 \
+    --random_restart_num 42 \
+    --n_datasets 10 \
+
+
